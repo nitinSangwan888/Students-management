@@ -1,0 +1,32 @@
+.layoutLight{
+display: flex;
+    --primary: #3d6cd8;
+        --secondary: #e8e8e8;
+        --light: #191C24;
+        --dark: #ffffff;
+}
+.layoutDark{
+    display: flex;
+        --primary: #EB1616;
+        --secondary: #191C24;
+        --light: #6C7293;
+        --dark: #000000;
+}
+
+.mainLayoutWrapper{
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+    /* background-color: yellow; */
+}
+.aside{
+    flex: 1;
+    background-color: rgb(64, 38, 38);
+    height: 100vh;
+}
+
+.main{
+    flex: 5;
+    /* background-color: red; */
+    height: 100%;
+}
