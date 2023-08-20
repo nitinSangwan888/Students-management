@@ -16,7 +16,8 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
-const Header = () => {
+const Header = (props:any) => {
+  const {open,setOpen}=props
   const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
@@ -169,6 +170,7 @@ const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
             color="inherit"
             aria-label="open drawer"
             sx={{ mr: 2 }}
+            onClick={()=>setOpen(!open)}
           >
             <MenuIcon />
           </IconButton>
