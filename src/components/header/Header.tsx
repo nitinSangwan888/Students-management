@@ -16,6 +16,7 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
+
 const Header = () => {
   const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -90,7 +91,7 @@ const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
         horizontal: 'right',
       }}
       id={menuId}
-      keepMounted
+      keepMounted  
       transformOrigin={{
         vertical: 'top',
         horizontal: 'right',

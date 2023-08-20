@@ -1,3 +1,61 @@
 .sidebarWrapper{
     background-color: var(--light);
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+    padding-left: 2rem;
+}
+.sidebarWrapperone img{
+    height: 70px;
+    width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebarWrappertwo{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+color: aliceblue;
+
+width: 200px;
+}
+.sidebarWrappertwo:hover{
+    background-color: red;
+}
+
+.sidebarWrappertwo button{
+    
+  font-size: 2rem;
+    outline:none;
+    border:none;
+    background: transparent;
+    color: white;
+    
+}
+
+.sidebarWrappertwo h1{
+   font-size: 1.2rem;
+   margin-left: 1rem;
+   font-weight: 200;
+   letter-spacing: 3px;
+}
+
+.adminWrapper{
+    display: flex;
+    color: white;
+}
+
+.adminWrapper h1{
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    font-weight: 400;
+    
+}
+
+.adminWrapper p{
+    padding-left: 1rem;
 }
