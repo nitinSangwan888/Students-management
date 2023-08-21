@@ -4,17 +4,19 @@
     width: 100%;
     background-color: var(--black);
     /* height: 100vh; */
+    margin-left: 6px;
 }
 .DetailsWrapper{
 display: flex;
 width: 100%;
-justify-content: space-around;
+justify-content: space-evenly;
 padding: 1rem 0;
-
+padding-left: 6px;
 }
 .cardDetails{
     width: 23%;
-    height: 15vh;
+    
+    padding:  1rem 0;
     box-shadow: 0 0 10px black;
     border-radius: 4px;
     background-color: var(--light);
@@ -42,8 +44,8 @@ padding: 1rem 0;
 .ChartsWrapper{
     width: 100%;
     display: flex;
-    justify-content: space-around;
-
+    justify-content: space-evenly;
+padding-left: 6px;
 }
 .chartContainer{
     width: 48%;
@@ -83,7 +85,7 @@ text-decoration: none;
 .TableWrapper{
     width: 100%;
     display: flex;
-    
+    margin:1rem 0 ;
     justify-content: center;
     /* align-items: center; */
     height: 80vh;

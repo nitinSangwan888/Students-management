@@ -40,9 +40,9 @@ const Home = () => {
 })}  
   
 </div>
-{/* <div className={styles.TableWrapper}>
+<div className={styles.TableWrapper}>
   <TableData/>
-</div> */}
+</div>
 
 
     </div>

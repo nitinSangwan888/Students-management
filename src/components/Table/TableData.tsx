@@ -37,8 +37,8 @@ const rows = [
 
 export default function TableData() {
   return (
-    <div style={{ height: 400, width: '90%',backgroundColor:"white" }}>
-      <DataGrid sx={{color:"red"}}
+    <div style={{ height: 400, width: '90%',backgroundColor:"black" }}>
+      <DataGrid sx={{color:"white"}}
         rows={rows}
         columns={columns}
         initialState={{
