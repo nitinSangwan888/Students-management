@@ -46,18 +46,3 @@ width: 200px;
    letter-spacing: 3px;
 }
 
-.adminWrapper{
-    display: flex;
-    color: white;
-}
-
-.adminWrapper h1{
-    font-size: 1.2rem;
-    margin-left: 1rem;
-    font-weight: 400;
-    
-}
-
-.adminWrapper p{
-    padding-left: 1rem;
-}

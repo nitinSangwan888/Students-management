@@ -5,6 +5,7 @@ import Sidebar from "../components/sidebar/Sidebar";
 import { LayoutRouteProps } from "react-router-dom";
 import { Outlet,  } from "react-router-dom";
 import './Layout.css'
+import Home from "../pages/Home/Home";
 const Layout: React.FC<LayoutRouteProps> = () => {
   const [open,setOpen]=useState(true)
   return (
@@ -20,6 +21,7 @@ const Layout: React.FC<LayoutRouteProps> = () => {
         </header>
         <main className="main">
           <Outlet />
+          {/* <Home/> */}
         </main>
       </div>
     </div>
