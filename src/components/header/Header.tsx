@@ -179,7 +179,10 @@ const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
             component="div"
             sx={{ display: { xs: 'none', sm: 'block' } }}
           >
-            Ashoka
+            <div className='logo'>
+            <img src="ashoka white.png" alt="" />
+            </div>
+            
           </Typography>
           
           <Search>

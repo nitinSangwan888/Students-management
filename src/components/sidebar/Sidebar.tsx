@@ -61,7 +61,7 @@ const arr = [
   return (
     <div className={styles.sidebarWrapper}>
       <div className={styles.sidebarWrapperone}>
-        <img src="ashoka white.png" alt="" />
+        
      
       </div>
 
