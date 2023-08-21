@@ -6,6 +6,8 @@
     justify-content: space-around;
     flex-direction: column;
     padding-left: 2rem;
+    position: fixed;
+    overflow-y: scroll;
 }
 .sidebarWrapperone img{
     height: 70px;

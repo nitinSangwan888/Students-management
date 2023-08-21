@@ -137,7 +137,7 @@ const grafCHart = [
         bottom: 5,
       }}
     >
-      <CartesianGrid strokeDasharray="3 3" />
+      <CartesianGrid stroke="black"  />
       <XAxis dataKey="name" />
       <YAxis />
       <Tooltip />
@@ -146,21 +146,22 @@ const grafCHart = [
         dataKey="uv"
         stackId="1"
         stroke="#8884d8"
-        fill="#8884d8"
+        fill="rgba(255, 0, 0, 0.432)"
       />
       <Area
         type="monotone"
         dataKey="pv"
         stackId="1"
         stroke="#82ca9d"
-        fill="#82ca9d"
+        fill="#dc3545"
+        strokeDasharray="3 3"
       />
       <Area
         type="monotone"
         dataKey="amt"
         stackId="1"
         stroke="#ffc658"
-        fill="#ffc658"
+        fill="red"
       />
     </AreaChart>
 ];

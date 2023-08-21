@@ -3,6 +3,7 @@
 
 import  { chart } from '../../components/Recharts/Recharts'
 import { SaleDetails } from '../../components/SaleDetails/SaleDetails'
+import TableData from '../../components/Table/TableData'
 import styles from './Home.module.css'
 
 
@@ -39,6 +40,9 @@ const Home = () => {
 })}  
   
 </div>
+{/* <div className={styles.TableWrapper}>
+  <TableData/>
+</div> */}
 
 
     </div>
