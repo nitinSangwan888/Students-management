@@ -4,6 +4,10 @@ display: flex;
         --secondary: #e8e8e8;
         --light: #191C24;
         --dark: #ffffff;
+        --black:black;
+        --text:#EB1616;
+        --textWhite:#6C7293;
+       
 }
 .layoutDark{
     display: flex;
