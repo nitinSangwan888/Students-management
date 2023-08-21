@@ -16,13 +16,12 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
-<<<<<<< HEAD
+
 const Header = (props:any) => {
   const {open,setOpen}=props
-=======
 
-const Header = () => {
->>>>>>> fcdd91f5ee806366527c1b5880bcd18e10733b5c
+
+
   const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,

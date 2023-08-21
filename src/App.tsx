@@ -15,11 +15,13 @@ function App() {
           <Route path="/" element={<Login />}/>
             {/* Set up child routes */}
             <Route path="/register" element={<Register />} />
-            <Route path="/home" element={<Layout />} />
+            <Route path="/home" element={<Layout />} >
+
             {/* Define an index route */}
-            <Route  element={<Home />} />
+            <Route index element={<Home />} />
             {/* Define a catch-all route for unknown paths */}
             <Route path="*" element={<NoPage />} />
+            </Route>
        
         </Routes>
       </BrowserRouter>
