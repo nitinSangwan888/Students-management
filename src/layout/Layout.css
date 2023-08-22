@@ -7,7 +7,6 @@ display: flex;
         --black:black;
         --text:#EB1616;
         --textWhite:#6C7293;
-       
 }
 .layoutDark{
     display: flex;
@@ -22,11 +21,11 @@ display: flex;
     flex-direction: column;
     flex: 5;
     /* background-color: yellow; */
+    overflow-x: hidden;
 }
 .aside{
     flex: 1;
-    background-color: rgb(64, 38, 38);
-    height: 100vh;
+
 }
 
 .main{
