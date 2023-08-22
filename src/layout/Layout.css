@@ -8,6 +8,8 @@ display: flex;
         --text:#EB1616;
         --textWhite:#6C7293;
        background-color: var(--black);
+       margin: 0;
+       padding: 0;
 }
 .layoutDark{
     display: flex;
@@ -26,11 +28,9 @@ display: flex;
 }
 .aside{
     flex: 1;
-    height: 100vh;
 }
 
 .main{
     flex: 5;
-    /* background-color: red; */
     height: 100%;
 }

@@ -6,15 +6,15 @@ import  { chart } from '../../components/Recharts/Recharts'
 import { SaleDetails } from '../../components/SaleDetails/SaleDetails'
 import TableData from '../../components/Table/TableData'
 import styles from './Home.module.css'
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
 
 const Home = () => {
   return (
     <div className={styles.HomeWrapper} >
 
 <div className={styles.DetailsWrapper}>
-{SaleDetails.map((item:any)=>{
-  return <div className={styles.cardDetails}>
+{SaleDetails.map((item:any,index)=>{
+  return <div className={styles.cardDetails} key={index}>
 <h1>{item.component}</h1>
 <div>
   <p>{item.title}</p>
