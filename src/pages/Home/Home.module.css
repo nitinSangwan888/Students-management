@@ -3,8 +3,10 @@
     flex-direction: column;
     width: 100%;
     background-color: var(--black);
-    /* height: 100vh; */
-    margin-left: 6px;
+    
+    padding: 6px;
+    overflow-x: hidden;
+
 }
 .DetailsWrapper{
 display: flex;
@@ -46,6 +48,7 @@ padding-left: 6px;
     display: flex;
     justify-content: space-evenly;
 padding-left: 6px;
+
 }
 .chartContainer{
     width: 48%;
@@ -82,11 +85,54 @@ line-height: 1.5;
 color: #EB1616;
 text-decoration: none;
 }
+
 .TableWrapper{
     width: 100%;
     display: flex;
     margin:1rem 0 ;
     justify-content: center;
-    /* align-items: center; */
-    height: 80vh;
+   
+}
+.TableContainer{
+    padding: 1rem 0;
+    width: 97%;
+    background-color: var(--light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8px;
+}
+.TableHading{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem; 
+}
+.TableHading h1{
+    font-size: 1rem;
+    color: white;
+    margin-top: 0;
+margin-bottom: .5rem;
+font-family: "Roboto",sans-serif;
+font-weight: 700;
+line-height: 1.2;
+}
+.TableHading button{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-family: "Open Sans",sans-serif;
+font-size: 1rem;
+font-weight: 400;
+line-height: 1.5;
+color: #EB1616;
+text-decoration: none;
+}
+.CalendarWrapper{
+    display: flex;
+    width: 100%;
+    justify-content: start;
+    align-items: center;
+    background-color: #EB1616;
 }

@@ -105,8 +105,8 @@ const barchartData = [
 
 const barchart = [
   <BarChart
-    width={500}
-    height={300}
+  width={500}
+  height={250}
     data={barchartData}
     margin={{
       top: 5,
@@ -128,7 +128,7 @@ const barchart = [
 const grafCHart = [
   <AreaChart
   width={500}
-  height={300}
+  height={250}
       data={grafCHartdata}
       margin={{
         top: 5,
