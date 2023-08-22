@@ -62,11 +62,11 @@ const Register = () => {
               <Grid item xs={12} sm={6}>
                 <TextField
                   autoComplete="given-name"
-                  name="firstName"
+                  name="name"
                   required
                   fullWidth
-                  id="firstName"
-                  label="First Name"
+                  id="Name"
+                  label=" Name"
                   autoFocus
                 />
               </Grid>
@@ -74,9 +74,9 @@ const Register = () => {
                 <TextField
                   required
                   fullWidth
-                  id="lastName"
-                  label="Last Name"
-                  name="lastName"
+                  id="phone"
+                  label="Phone"
+                  name="phone"
                   autoComplete="family-name"
                 />
               </Grid>
@@ -104,7 +104,7 @@ const Register = () => {
               <Grid item xs={12}>
                 <FormControlLabel
                   control={<Checkbox value="allowExtraEmails" color="primary" />}
-                  label="I want to receive inspiration, marketing promotions and updates via email."
+                  label="remember me"
                 />
               </Grid>
             </Grid>

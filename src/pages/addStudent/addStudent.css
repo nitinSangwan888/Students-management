@@ -1,0 +1,34 @@
+.studentcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    height: 400px;
+    width: 600px;
+}
+
+
+
+.studentcontainermain{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: red; */
+  
+  
+}
+
+.studentContainertwo{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+.studentContainerone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

@@ -7,44 +7,59 @@ import { LiaTableSolid } from 'react-icons/lia';
 import {BiBarChartSquare} from'react-icons/bi'
 import {MdRestorePage} from'react-icons/md'
 import styles from './Sidebar.module.css'
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Sidebar = () => {
-
-
+const [isactive, setActive] = useState(0)
+const navigate = useNavigate()
 const arr = [
   {
     title:"Dashboard",
-    icon:<IoIosSpeedometer/>
+    icon:<IoIosSpeedometer/>,
+    url:"/home"
   },
   {
-    title:"Elements",
-    icon:<BsLaptop/>
+    title:"Students",
+    icon:<BsLaptop/>,
+    url:"/home/students"
+
 
   },
   {
-    title:"Widgets",
-    icon:<MdWidgets/>
+    title:"Analytics",
+    icon:<MdWidgets/>,
+    url:"/home"
+
 
   },
 
   {
     title:"Forms",
-    icon:<FaWpforms/>
+    icon:<FaWpforms/>,
+    url:"/home"
+
 
   },
   {
     title:"Tables",
-    icon:<LiaTableSolid/>
+    icon:<LiaTableSolid/>,
+    url:"/home"
+
 
   },
   {
     title:"Charts",
-    icon:<BiBarChartSquare/>
+    icon:<BiBarChartSquare/>,
+    url:"/home"
+
 
   },
   {
     title:"Pages",
-    icon:<MdRestorePage/>
+    icon:<MdRestorePage/>,
+    url:"/home"
+
 
   }
 ]
@@ -61,17 +76,28 @@ const arr = [
     
     <div className={styles.sidebarWrapper}>
       
-
+      <div className={styles.logo}>
+            <img src="/ashoka-white.png" alt="" />
+            </div>
      
+     <div className={styles.linksWrapper}>
+
      
 {
  arr.map((item,index)=>{
-return <div className={styles.sidebarWrappertwo} key={index}>
-  <button>{item.icon}</button>
-  <h1>{item.title}</h1>
+return <div className={`${styles.sideLinksWrapper} ${isactive==index ? styles.active : ""}`} key={index} 
+onClick={()=>{
+  setActive(index)
+  navigate(item.url)
+}}
+>
+  <button style={{backgroundColor:isactive==index?`var(--light)`:"",color:isactive==index?`var(--text)`:""}}    >{item.icon}</button>
+  <span style={{color:isactive==index?`var(--text)`:""}}  >    {item.title}</span>
 </div>
  })
 }
+</div>
+
     </div>
   )
 }

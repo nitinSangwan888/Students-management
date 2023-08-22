@@ -7,7 +7,7 @@ display: flex;
         --black:black;
         --text:#EB1616;
         --textWhite:#6C7293;
-       
+       background-color: var(--black);
 }
 .layoutDark{
     display: flex;
@@ -25,7 +25,6 @@ display: flex;
 }
 .aside{
     flex: 1;
-    background-color: rgb(64, 38, 38);
     height: 100vh;
 }
 
