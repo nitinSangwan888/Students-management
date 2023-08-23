@@ -17,9 +17,12 @@ display: flex;
 
     display: flex;
         --primary: #EB1616;
+        --text:#b62929;
         --secondary: #191C24;
         --light: #6C7293;
         --dark: #000000;
+        --textWhite:#333335;
+
 }
 
 .mainLayoutWrapper{

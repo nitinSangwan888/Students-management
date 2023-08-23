@@ -133,7 +133,7 @@ text-decoration: none;
     display: flex;
     width: 100%;
     justify-content: space-between;
-   
+   /* background-color: var(--light); */
     box-sizing: border-box;
     
 
