@@ -51,10 +51,11 @@
 }
 
 .sideLinksWrapper span{
-    color: white;
+    color: var(var(--dark));
     text-align: center;
     margin-left: 1rem;
     font-size: 1.2rem;
+   
 }
 .linksWrapper{
     display: flex;

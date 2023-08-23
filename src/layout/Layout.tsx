@@ -5,11 +5,16 @@ import Sidebar from "../components/sidebar/Sidebar";
 import { LayoutRouteProps } from "react-router-dom";
 import { Outlet,  } from "react-router-dom";
 import './Layout.css'
-import Home from "../pages/Home/Home";
+import { useSelector } from "react-redux";
+
+
 const Layout: React.FC<LayoutRouteProps> = () => {
+  const mode = useSelector((state:any)=>state.darkmode.darkMode);
   const [open,setOpen]=useState(true)
   return (
-    <div className="layoutLight" style={{transition:"0.5s all ese"}}>
+
+
+    <div className={mode?"layoutLight":"layoutDark"} style={{transition:"0.5s all ese"}}>
     {open?   <aside className="aside"  >
    
        <Sidebar />
@@ -21,10 +26,11 @@ const Layout: React.FC<LayoutRouteProps> = () => {
         </header>
         <main className="main">
           <Outlet />
-          {/* <Home/> */}
+        
         </main>
       </div>
     </div>
+  
   );
 };
 

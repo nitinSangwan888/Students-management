@@ -26,9 +26,9 @@ const Home = () => {
 </div>
 
 <div className={styles.ChartsWrapper}>
-{chart.map((item)=>{
-  return <div className={styles.chartContainer}>
-    <div className={styles.ChartHeading} >
+{chart.map((item,index)=>{
+  return <div className={styles.chartContainer} key={index}>
+    <div className={styles.ChartHeading}  >
 
 <p>{item.title}</p>
 <button >{item.button}</button>
