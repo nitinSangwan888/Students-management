@@ -16,18 +16,43 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
-
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+import { useSelector ,useDispatch} from 'react-redux';
+import { lightMode } from '../../../redux/features/darkmode/darkmodeSlice';
+import { RootState } from '../../../redux/store/store';
 const Header = (props:any) => {
   const {open,setOpen}=props
+  const mode = useSelector((state:RootState)=>state.darkmode.darkMode);
+
+  const dispatch = useDispatch()
+
+
+  React.useEffect(() => {
+    const storedMode = localStorage.getItem('mode');
+    if (storedMode !== null) {
+      dispatch(lightMode(storedMode === 'dark')); 
+    }
+  }, [dispatch]);
+
+
+
+  const handleMode = () => {
+  
+    const newMode = !mode;
+    dispatch(lightMode(newMode));
+    localStorage.setItem('mode', newMode ? 'dark' : 'light');
+  };
 
 
 
   const Search = styled('div')(({ theme }) => ({
   position: 'relative',
+  
   borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  backgroundColor: `var(--search)`,
   '&:hover': {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
+    backgroundColor: `var(--search)`,
   },
   marginRight: theme.spacing(2),
   marginLeft: 0,
@@ -129,7 +154,10 @@ const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
       onClose={handleMobileMenuClose}
     >
       <MenuItem>
-        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+
+  
+
+        <IconButton size="large" aria-label="show 4 new mails" sx={{color:`var(--dark)`}}>
           <Badge badgeContent={4} color="error">
             <MailIcon />
           </Badge>
@@ -149,12 +177,14 @@ const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
         <p>Notifications</p>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
+  
         <IconButton
           size="large"
           aria-label="account of current user"
           aria-controls="primary-search-account-menu"
           aria-haspopup="true"
           color="inherit"
+          
         >
           <AccountCircle />
         </IconButton>
@@ -171,9 +201,9 @@ const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
           <IconButton
             size="large"
             edge="start"
-            color="inherit"
+            // color="inherit"
             aria-label="open drawer"
-            sx={{ mr: 2 }}
+            sx={{ mr: 2,color:`var(--secondary)` }}
             onClick={()=>setOpen(!open)}
           >
             <MenuIcon />
@@ -199,7 +229,12 @@ const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
           </Search>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+
+<IconButton onClick={handleMode} sx={{color:`var(--dark)`}} >
+{mode === false ? <Brightness7Icon /> : <Brightness4Icon />}
+</IconButton>
+
+            <IconButton size="large" aria-label="show 4 new mails" sx={{color:`var(--dark)`}}>
               <Badge badgeContent={4} color="error">
                 <MailIcon />
               </Badge>
@@ -207,7 +242,9 @@ const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
             <IconButton
               size="large"
               aria-label="show 17 new notifications"
-              color="inherit"
+              // color="inherit"
+              sx={{color:`var(--dark)`}}
+              
             >
               <Badge badgeContent={17} color="error">
                 <NotificationsIcon />
@@ -220,7 +257,7 @@ const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
               aria-controls={menuId}
               aria-haspopup="true"
               onClick={handleProfileMenuOpen}
-              color="inherit"
+              sx={{color:`var(--dark)`}}
             >
               <AccountCircle />
             </IconButton>

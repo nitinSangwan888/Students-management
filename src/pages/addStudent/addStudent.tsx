@@ -26,7 +26,7 @@ const addStudent = () => {
     });
 }
   return (
-    <div>
+    <div className='StudentWrapper'>
 
 <ThemeProvider theme={defaultTheme}>
       <Container component="main" maxWidth="xs">
