@@ -132,9 +132,9 @@ text-decoration: none;
 .CalendarWrapper{
     display: flex;
     width: 100%;
-    justify-content: start;
-    align-items: center;
+    justify-content: space-between;
+   
     box-sizing: border-box;
     
-background-color: var(--light);
+
 }
