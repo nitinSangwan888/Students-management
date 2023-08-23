@@ -201,9 +201,9 @@ const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
           <IconButton
             size="large"
             edge="start"
-            color="inherit"
+            // color="inherit"
             aria-label="open drawer"
-            sx={{ mr: 2 }}
+            sx={{ mr: 2,color:`var(--secondary)` }}
             onClick={()=>setOpen(!open)}
           >
             <MenuIcon />

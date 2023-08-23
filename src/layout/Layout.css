@@ -12,6 +12,7 @@ display: flex;
        padding: 0;
        width: 100%;
        --search:rgba(255, 255, 255, 0.199);
+       --hover:red;
 }
 .layoutDark{
     width: 100%;
@@ -19,12 +20,12 @@ display: flex;
     display: flex;
         --primary: #EB1616;
         --secondary: #191C24;
-        --light: #ffffff;
+        --light: rgb(255, 255, 255) ;
         --dark: #000000;
-        --black:rgb(255, 255, 255);
+        --black:#e2dbdb ;
         --text:#0d0d0d;
        --search:rgba(9, 9, 9, 0.777);
-
+       --hover:red;
 }
 
 .mainLayoutWrapper{
@@ -38,7 +39,7 @@ display: flex;
 
 .aside{
 
-    /* background-color: red; */
+    background-color: var(--black);
     width: 20%;
 }
 .main{
