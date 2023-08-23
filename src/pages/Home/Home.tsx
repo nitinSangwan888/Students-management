@@ -2,6 +2,7 @@
 // import Recharts from '../../components/Recharts/Recharts'
 
 import CalendarData from '../../components/Calender/Calendar';
+import Massege from '../../components/Calender/Massege/Massege';
 import  { chart } from '../../components/Recharts/Recharts'
 import { SaleDetails } from '../../components/SaleDetails/SaleDetails'
 import TableData from '../../components/Table/TableData'
@@ -55,6 +56,9 @@ const Home = () => {
 </div>
 <div className={styles.CalendarWrapper}>
   <CalendarData/>
+  <Massege/>
+  <Massege/>
+
 </div>
 
     </div>

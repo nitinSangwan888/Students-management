@@ -1,0 +1,18 @@
+/* styles.css */
+
+/* Style for the day elements (dates) */
+.MuiPickersDay-day:not(.MuiPickerDay-dayDisabled) {
+    color: green; /* Change the color as needed */
+  }
+  
+  /* Style for the weekday text */
+  .MuiPickersCalendar-weekDayLabel {
+    color: blue; /* Change the color as needed */
+  }
+  
+  /* Style for the month and year label */
+  .MuiPickersMonthSelection-container,
+  .MuiPickersYearSelection-container {
+    color: red; /* Change the color as needed */
+  }
+  
