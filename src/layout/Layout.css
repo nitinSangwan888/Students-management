@@ -18,13 +18,14 @@ display: flex;
     width: 100%;
 
     display: flex;
+    --black:black;
+
         --primary: #EB1616;
+        --text:#b62929;
         --secondary: #191C24;
         --light: rgb(255, 255, 255) ;
         --dark: #000000;
-        --black:#e2dbdb ;
-        --text:#0d0d0d;
-       --search:rgba(9, 9, 9, 0.777);
+        --search:rgba(255, 255, 255, 0.199);
        --hover:red;
 }
 

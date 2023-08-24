@@ -61,6 +61,14 @@ const Home = () => {
 
 </div>
 
+    
+    <div className={styles.footerWrapper}>
+<div className={styles.footerDetails}><h1>Ashoka</h1> <span>, All Right CopyRight 2023</span>
+ </div>
+<div className={styles.footercopyRight}>
+   <h1><span>MorganDynamices</span>  Designed By </h1> </div>
+
+    </div>
     </div>
   )
 }
