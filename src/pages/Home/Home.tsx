@@ -5,6 +5,7 @@ import CalendarData from '../../components/Calender/Calendar';
 import Massege from '../../components/Calender/Massege/Massege';
 import  { chart } from '../../components/Recharts/Recharts'
 import { SaleDetails } from '../../components/SaleDetails/SaleDetails'
+import StudentIdCard from '../../components/StudentIdCard/StudentIdCard';
 import TableData from '../../components/Table/TableData'
 import styles from './Home.module.css'
 // import Button from '@mui/material/Button';
@@ -60,7 +61,7 @@ const Home = () => {
   <Massege/>
 
 </div>
-
+<StudentIdCard/>
     
     <div className={styles.footerWrapper}>
 <div className={styles.footerDetails}><h1>Ashoka</h1> <span>, All Right CopyRight 2023</span>

@@ -1,0 +1,62 @@
+.StudentIdCardWrapper {
+  background-color: rgba(138, 133, 133, 0.521);
+  background-image: url("/public/idcard.png");
+  width: 250px;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  margin-top: 1rem;
+}
+.studendHading {
+  width: 100%;
+  box-sizing: border-box;
+  padding:0px 0px 0px 5px ;
+}
+
+.studentProfile {
+  width: 100%;
+  height: auto;
+  display: flex;
+
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 2rem;
+  /* height: 40vh; */
+}
+.studentImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 25vh;
+
+}
+.studentImage h1 {
+  font-size: 1rem;
+  margin: 0;
+  padding-top: 1rem;
+  color: rgba(0, 0, 0, 0.795);
+
+}
+.sameProfile {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 1rem;
+}
+.sameStudentContaint {
+  display: flex;
+
+  padding: 5px;
+  justify-content: space-around;
+  z-index: 100;
+  padding-left: 30px;
+}
+.sameStudentContaint h1 {
+  margin: 0;
+  font-size: 10px;
+  width: 60%;
+  z-index: 1000;
+  /* background-color: yellow; */
+}

@@ -7,7 +7,7 @@ import Login from './pages/login/Login';
 import Register from './pages/register/Register';
 import AddStudent from './pages/addStudent/addStudent';
 import Students from './pages/students/Students';
-
+import StudentIdCard from './pages/studentIdCard/studentIdCard'
 function App() {
   return (
     <>
@@ -25,6 +25,8 @@ function App() {
             <Route index element={<Home />} />
             <Route path="/home/add" element={<AddStudent />} /> 
             <Route path="/home/students" element={<Students />} /> 
+            <Route path="/home/studentIdCard" element={<StudentIdCard />} /> 
+
 
             {/* Define a catch-all route for unknown paths */}
             <Route path="*" element={<NoPage />} />
