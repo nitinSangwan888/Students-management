@@ -8,37 +8,6 @@
   box-sizing: border-box;
 }
 
-.layoutLight{
-  display: flex;
-      --primary: #3d6cd8;
-          --secondary: #e8e8e8;
-          --light: #191C24;
-          --dark: #ffffff;
-          --black:black;
-          --text:#EB1616;
-          --textWhite:#6C7293;
-         background-color: var(--black);
-         margin: 0;
-         padding: 0;
-         width: 100%;
-         --search:rgba(255, 255, 255, 0.199);
-         --hover:rgb(0, 0, 0);
-  }
-  .layoutDark{
-      width: 100%;
-  
-      display: flex;
-      --black:rgb(214, 205, 205);
-      background-color: var(--black);
-  
-          --primary: #EB1616;
-          --text:#b62929;
-          --secondary: #191C24;
-          --light: rgb(255, 255, 255) ;
-          --dark: #000000;
-          --search:rgba(255, 255, 255, 0.199);
-         --hover:rgb(0, 13, 255);
-  }
 
   body{
     background-color: rgba(80, 78, 78, 0.753);

@@ -153,6 +153,7 @@ const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
+      
       <MenuItem>
 
   
@@ -189,6 +190,13 @@ const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
           <AccountCircle />
         </IconButton>
         <p>Profile</p>
+      </MenuItem>
+      <MenuItem>
+      <IconButton onClick={handleMode} sx={{color:`var(--dark)`}} >
+{mode === false ? <Brightness7Icon /> : <Brightness4Icon />}
+</IconButton>
+<p>Mode</p>
+
       </MenuItem>
     </Menu>
   );
