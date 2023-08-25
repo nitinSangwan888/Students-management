@@ -7,7 +7,7 @@ const studentIdCard = () => {
   const { data } = useGetAllStudentQuery()
 console.log(data)
   return (
-    <div style={{display:"flex",justifyContent:"space-around"}}>
+    <div style={{display:"flex",justifyContent:"space-around",flexWrap:"wrap"}}>
       {data?.data?.map((item:StudentEntity,index)=>{
         
         return <StudentIdCard item={item} key={index} />

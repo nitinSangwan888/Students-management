@@ -9,8 +9,10 @@ import {MdRestorePage} from'react-icons/md'
 import styles from './Sidebar.module.css'
 // import { useState } from 'react';
 import { useNavigate,useLocation } from 'react-router-dom';
-
+import { useSelector } from "react-redux";
+import { imageListClasses } from '@mui/material';
 const Sidebar = () => {
+  const mode = useSelector((state:any)=>state.darkmode.darkMode);
 // const [isactive, setActive] = useState(0)
 const navigate = useNavigate()
 const location = useLocation()
@@ -76,7 +78,8 @@ const arr = [
     <div className={styles.sidebarWrapper}>
       
       <div className={styles.logo}>
-            <img src="/ashoka-white.png" alt="" />
+      {mode?  <img src="/ashoka-white.png" alt="" />: <img src="/Ashoka.png" alt="" />}
+         
             </div>
      
      <div className={styles.linksWrapper}>
