@@ -14,7 +14,7 @@ const Layout: React.FC<LayoutRouteProps> = () => {
   return (
 
 
-    <div className={mode?"layoutLight":"layoutDark"} style={{transition:"0.5s all ese"}}>
+    <div className={mode?"layoutLight":"layoutDark"} >
     {open?   <aside className="aside"  >
    
        <Sidebar />

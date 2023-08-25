@@ -14,7 +14,7 @@ import Payments from './pages/Payments/Payments';
 import Analytics from './pages/Analytics/Analytics';
 function App() {
   return (
-    <>
+    <div className='appWrapper'  >
       <BrowserRouter>
         <Routes>
          
@@ -42,7 +42,7 @@ function App() {
        
         </Routes>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 
