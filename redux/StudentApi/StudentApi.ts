@@ -11,4 +11,24 @@ export const allStudentApi = createApi({
   }),
 });
 
-export const { useGetAllStudentQuery } = allStudentApi;
+
+export const createStudentApi = createApi({
+  reducerPath: "createStudentApi",
+  baseQuery: fetchBaseQuery({ baseUrl: BASEURL }),
+  endpoints: (builder) => ({
+    createStudent: builder.mutation<Student, FormData>({
+      query: (formData) => ({
+        url: "/v1/create/students",
+        method: "POST",
+        body: formData,
+      }),
+    }),
+  }),
+});
+
+
+
+
+export const { useGetAllStudentQuery  } = allStudentApi;
+
+export const { useCreateStudentMutation } = createStudentApi;

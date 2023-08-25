@@ -8,27 +8,35 @@ import Register from './pages/register/Register';
 import AddStudent from './pages/addStudent/addStudent';
 import Students from './pages/students/Students';
 import StudentIdCard from './pages/studentIdCard/studentIdCard'
+import Tables from './pages/Tables/Tables';
+import Form from './pages/Forms/Form';
+import Payments from './pages/Payments/Payments';
+import Analytics from './pages/Analytics/Analytics';
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          {/* Set up your top-level route */}
+         
           <Route path="/" element={<Login />}/>
-            {/* Set up child routes */}
+        
             <Route path="/register" element={<Register />} />
-            {/* <Route path="/addStudent" element={<AddStudent />} /> */}
+          
 
             <Route path="/home" element={<Layout />} >
 
-            {/* Define an index route */}
+            
             <Route index element={<Home />} />
             <Route path="/home/add" element={<AddStudent />} /> 
             <Route path="/home/students" element={<Students />} /> 
-            <Route path="/home/studentIdCard" element={<StudentIdCard />} /> 
+            <Route path="/home/tables" element={<Tables />} />   
+            <Route path="/home/forms" element={<Form />} />   
+            <Route path="/home/payments" element={<Payments  />} /> 
+            <Route path="/home/analytics" element={<Analytics />} />   
+            <Route path="/home/studentIdCard" element={<StudentIdCard />} />   
 
 
-            {/* Define a catch-all route for unknown paths */}
+            
             <Route path="*" element={<NoPage />} />
             </Route>
        

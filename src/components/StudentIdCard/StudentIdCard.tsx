@@ -1,33 +1,35 @@
-import React from 'react'
+
+// import { StudentEntity } from '../../../interface/interface'
 import styles from './StudentIdCard.module.css'
-const StudentIdCard = () => {
+const StudentIdCard = (props:any) => {
+   const {item}=props
   return (
     <div className={styles.StudentIdCardWrapper}>
      
         <div className={styles.studendHading}>
-            <img src="/ashoka-white.png" alt="" width={40} height={30} />
+            <img src='/ashoka-white.png' alt="" width={40} height={30} />
         </div>
         <div className={styles.studentProfile}>
             <div className={styles.studentImage}>
 
-            <img src="/image-50.png" alt="" width={100} height={90} />
-            <h1>Morgan Thakur</h1>
+            <img  src={item.photo}alt="" width={100} height={90} />
+            <h1>{item.name}</h1>
             </div>
             
             <div className={styles.sameProfile}>
             <div  className={styles.sameStudentContaint}>
-                <h1>ID NO</h1>
-                <h1>0000000</h1>
+                <h1>Id No</h1>
+                <h1>{item.batchId}</h1>
             </div>
             <div  className={styles.sameStudentContaint}>
-                <h1>DOB</h1>
-                <h1>MM/DD/YEAR</h1>
+                <h1>email</h1>
+                <h1>{item.email}</h1>
             </div><div  className={styles.sameStudentContaint}>
-                <h1>Email</h1>
-                <h1>Your Email</h1>
+                <h1>course</h1>
+                <h1>{item.course}</h1>
             </div><div  className={styles.sameStudentContaint}>
                 <h1>Phone</h1>
-                <h1>+00 000 000 00</h1>
+                <h1>{item.phone}</h1>
             </div>
             </div>
             

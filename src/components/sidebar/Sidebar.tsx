@@ -7,12 +7,13 @@ import { LiaTableSolid } from 'react-icons/lia';
 import {BiBarChartSquare} from'react-icons/bi'
 import {MdRestorePage} from'react-icons/md'
 import styles from './Sidebar.module.css'
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useState } from 'react';
+import { useNavigate,useLocation } from 'react-router-dom';
 
 const Sidebar = () => {
-const [isactive, setActive] = useState(0)
+// const [isactive, setActive] = useState(0)
 const navigate = useNavigate()
+const location = useLocation()
 const arr = [
   {
     title:"Dashboard",
@@ -29,7 +30,7 @@ const arr = [
   {
     title:"Analytics",
     icon:<MdWidgets/>,
-    url:"/home"
+    url:"/home/analytics"
 
 
   },
@@ -37,34 +38,32 @@ const arr = [
   {
     title:"Forms",
     icon:<FaWpforms/>,
-    url:"/home"
+    url:"/home/forms"
 
 
   },
   {
     title:"Tables",
     icon:<LiaTableSolid/>,
-    url:"/home"
+    url:"/home/tables"
 
 
   },
   {
     title:"Charts",
     icon:<BiBarChartSquare/>,
-    url:"/home"
+    url:"/home/payments"
 
 
   },
   {
     title:"Pages",
     icon:<MdRestorePage/>,
-    url:"/home"
+    url:"/home/pages"
 
 
   }
 ]
-
-
 
 
 
@@ -85,14 +84,14 @@ const arr = [
      
 {
  arr.map((item,index)=>{
-return <div className={`${styles.sideLinksWrapper} ${isactive==index ? styles.active : ""}`} key={index} 
+return <div className={`${styles.sideLinksWrapper} ${location.pathname==item.url? styles.active : ""}`} key={index} 
 onClick={()=>{
-  setActive(index)
+
   navigate(item.url)
 }}
 >
-  <button style={{backgroundColor:isactive==index?`var(--light)`:"",color:isactive==index?`var(--text)`:""}}    >{item.icon}</button>
-  <span style={{color:isactive==index?`var(--text)`:""}}  >    {item.title}</span>
+  <button style={{backgroundColor:location.pathname==item.url?`var(--light)`:"",color:location.pathname==item.url?`var(--text)`:""}}    >{item.icon}</button>
+  <span style={{color:location.pathname==item.url?`var(--text)`:""}}  >    {item.title}</span>
 </div>
  })
 }
