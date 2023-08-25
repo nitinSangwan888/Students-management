@@ -1,8 +1,12 @@
+import TableData from "../../components/Table/TableData"
 
-
+import Styles from './Student.module.css'
 const Students = () => {
   return (
-    <div>Students</div>
+    <div className={Styles.studentWrapper}>
+      
+      <TableData/>
+      </div>
   )
 }
 

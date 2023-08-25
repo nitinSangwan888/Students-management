@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './StudentIdCard.module.css'
 const StudentIdCard = () => {
   return (
-    <div className={styles.StudentIdCardWrapper}>
+    <div className={styles.StudentIdCardWrapper}>  
      
         <div className={styles.studendHading}>
             <img src="/ashoka-white.png" alt="" width={40} height={30} />
