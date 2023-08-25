@@ -5,14 +5,16 @@
   background-color: var(--black);
   padding-right: 1rem;
   box-sizing: border-box;
+
 }
 .DetailsWrapper {
   display: flex;
   width: 100%;
+
   justify-content: space-between;
   padding: 1rem 0;
-
   box-sizing: border-box;
+
 }
 .cardDetails {
   width: 23%;
@@ -20,6 +22,7 @@
   border-radius: 4px;
   background-color: var(--light);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
 }
@@ -43,6 +46,7 @@
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
+  
 }
 .chartContainer {
   width: 48%;
@@ -60,7 +64,8 @@
 }
 .ChartHeading p {
   font-size: 1rem;
-  color: white;
+  color: var(--dark);
+
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-family: "Roboto", sans-serif;
@@ -103,7 +108,7 @@
 }
 .TableHading h1 {
   font-size: 1rem;
-  color: white;
+  color: var(--dark);
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-family: "Roboto", sans-serif;
