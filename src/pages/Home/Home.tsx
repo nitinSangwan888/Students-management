@@ -56,9 +56,23 @@ const Home = () => {
   </div>
 </div>
 <div className={styles.CalendarWrapper}>
+  <div className={styles.CalendarContainer}>
+
   <CalendarData/>
+
+  </div>
+  <div className={styles.CalendarContainer}>
+
   <Massege/>
-  <Massege/>
+
+
+</div> <div className={styles.CalendarContainer}>
+
+<Massege/>
+
+
+</div>
+  
 
 </div>
 

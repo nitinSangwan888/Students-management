@@ -138,11 +138,12 @@
   /* background-color: var(--light); */
   box-sizing: border-box;
   flex-wrap: wrap;
-  
+  background-color: red;
 }
 .CalendarContainer{
   width: 350px;
   height: auto;
+  background-color: rgb(71, 58, 58);
  
   padding: 1rem 0;
 }
