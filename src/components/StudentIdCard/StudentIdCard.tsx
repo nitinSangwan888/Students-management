@@ -4,7 +4,7 @@ import styles from './StudentIdCard.module.css'
 const StudentIdCard = (props:any) => {
    const {item}=props
   return (
-    <div className={styles.StudentIdCardWrapper}>
+    <div className={styles.StudentIdCardWrapper}>  
      
         <div className={styles.studendHading}>
             <img src='/ashoka-white.png' alt="" width={40} height={30} />
