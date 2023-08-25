@@ -29,6 +29,6 @@ export const createStudentApi = createApi({
 
 
 
-export const { useGetAllStudentQuery  } = allStudentApi;
 
 export const { useCreateStudentMutation } = createStudentApi;
+export const { useGetAllStudentQuery  } = allStudentApi;
