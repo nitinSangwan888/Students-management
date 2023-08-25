@@ -10,7 +10,7 @@ import Avatar from '@mui/material/Avatar';
 const MessagesCard = () => {
   return (
     
-      <Card variant="outlined" sx={{backgroundColor:`var(--light)`,color:`var(--dark)`,width:"32%", height:"52vh"}} >
+      <Card variant="outlined" sx={{backgroundColor:`var(--light)`,color:`var(--dark)`,width:"100%",height:"100%", marginTop:"5px"}} >
         <CardContent    >
           <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mb: 2 }}>
             <Typography variant="h6" component="h6" sx={{ mb: 0,color:`var(--dark)` }}>

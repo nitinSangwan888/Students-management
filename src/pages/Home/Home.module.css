@@ -15,15 +15,18 @@
   justify-content: space-between;
   padding: 1rem 0;
   box-sizing: border-box;
+  flex-wrap: wrap;
+  
 
 }
 .cardDetails {
-  width: 23%;
-  padding: 1rem 0;
+  width: 270px;
+  margin-top: 10px;
+ 
+  height: 90px;
   border-radius: 4px;
   background-color: var(--light);
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
 }
@@ -47,10 +50,11 @@
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
-  
+  flex-wrap: wrap;
 }
 .chartContainer {
-  width: 48%;
+  width: 550px;
+  margin-top: 1rem;
   border-radius: 6px;
   background-color: var(--light);
   display: flex;
@@ -133,7 +137,14 @@
   justify-content: space-between;
   /* background-color: var(--light); */
   box-sizing: border-box;
+  flex-wrap: wrap;
   
+}
+.CalendarContainer{
+  width: 350px;
+  height: auto;
+ 
+  padding: 1rem 0;
 }
 .footerWrapper {
   width: 100%;
@@ -169,3 +180,29 @@
     color: var(--textWhite);
 
 }
+
+
+
+
+@media screen and (max-width: 670px){
+  .DetailsWrapper{
+    justify-content: center;
+    gap: 5px;
+  }
+  .ChartsWrapper{
+
+align-items: center;
+flex-direction: column;
+  }
+  .chartContainer{
+    width:95%;
+  }
+  .CalendarWrapper{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .CalendarContainer{
+    /* width: 30%; */
+  }
+} 
