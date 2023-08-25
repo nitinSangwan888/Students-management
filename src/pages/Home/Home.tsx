@@ -61,7 +61,7 @@ const Home = () => {
 
 </div>
 
-
+{/* <StudentIdCard/> */}
 
     
     <div className={styles.footerWrapper}>
