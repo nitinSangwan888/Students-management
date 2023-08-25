@@ -1,7 +1,7 @@
 .sidebarWrapper{
     background-color: var(--light);
     height: 100%;
-    width: 14%;
+    width: 16%;
     display: flex;
     align-items: flex-start;
     justify-content: space-evenly;

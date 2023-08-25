@@ -41,6 +41,7 @@ display: flex;
 .aside {
   background-color: var(--black);
   width: 20%;
+  /* background-color: red; */
 }
 .main {
 
