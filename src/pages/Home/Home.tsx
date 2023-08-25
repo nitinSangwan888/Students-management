@@ -1,5 +1,4 @@
 
-// import Recharts from '../../components/Recharts/Recharts'
 
 import CalendarData from '../../components/Calender/Calendar';
 import Massege from '../../components/Calender/Massege/Massege';
@@ -8,7 +7,7 @@ import { SaleDetails } from '../../components/SaleDetails/SaleDetails'
 
 import TableData from '../../components/Table/TableData'
 import styles from './Home.module.css'
-// import Button from '@mui/material/Button';
+
 
 const Home = () => {
   return (
@@ -28,8 +27,8 @@ const Home = () => {
 </div>
 
 <div className={styles.ChartsWrapper}>
-{chart.map((item,index)=>{
-  return <div className={styles.chartContainer} key={index}>
+{chart.map((item)=>{
+  return <div className={styles.chartContainer} >
     <div className={styles.ChartHeading}  >
 
 <p>{item.title}</p>
@@ -62,7 +61,7 @@ const Home = () => {
 
 </div>
 
-{/* <StudentIdCard/> */}
+
 
     
     <div className={styles.footerWrapper}>

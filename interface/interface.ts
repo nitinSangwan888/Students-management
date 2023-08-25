@@ -5,6 +5,7 @@ export interface Student {
     data?: (StudentEntity)[] | null;
   }
   export interface StudentEntity {
+  
     _id: string;
     photo: string;
     name: string;
