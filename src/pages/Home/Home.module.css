@@ -195,7 +195,8 @@
   .DetailsWrapper{
     justify-content: center;
     gap: 5px;
-    padding: 0 1rem;
+    padding: 0 .5rem;
+    box-sizing: border-box;
   }
   .cardDetails{
   width: 100%;
