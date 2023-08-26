@@ -1,11 +1,12 @@
 .layoutLight{
 display: flex;
-    --primary: #3d6cd8;
+    --primary: #dc3545;
         --secondary: #e8e8e8;
         --light: #191C24;
         --dark: #ffffff;
         --black:black;
         --text:#EB1616;
+        --cardIcon:#EB1616;
         --textWhite:#6C7293;
        background-color: var(--black);
        margin: 0;
@@ -19,10 +20,12 @@ display: flex;
     width: 100%;
 
     display: flex;
+    --cardIcon:#51a5e9;
+    
     --black:rgb(214, 205, 205);
 
-        --primary: #EB1616;
-        --text:#413b3b;
+        --primary:  #3d6cd8;
+        --text:#b62929;
         --secondary: #191C24;
         --light: rgb(255, 255, 255) ;
         --dark: #000000;
@@ -48,4 +51,10 @@ display: flex;
 .main {
 
   width: 100%;
+}
+
+@media screen and (max-width:1000px) {
+  .aside {
+    display: none ;
+  }
 }

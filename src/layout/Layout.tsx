@@ -1,5 +1,5 @@
 // Layout.tsx
-import React, { useState } from "react";
+import React, {  useState } from "react";
 import Header from "../components/header/Header";
 import Sidebar from "../components/sidebar/Sidebar";
 import { LayoutRouteProps } from "react-router-dom";
@@ -10,15 +10,18 @@ import { useSelector } from "react-redux";
 
 const Layout: React.FC<LayoutRouteProps> = () => {
   const mode = useSelector((state:any)=>state.darkmode.darkMode);
-  const [open,setOpen]=useState(true)
+  const [open,setOpen]=useState(false)
+    // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+
+
   return (
-
-
-    <div className={mode?"layoutLight":"layoutDark"} >
-    {open?   <aside className="aside"  >
+    <div className={mode ? "layoutLight" : "layoutDark"}>
+     
+        <aside className="aside"  style={{display:open?"flex":"none"}} >
+          <Sidebar setOpen={setOpen} />
+        </aside>
    
-       <Sidebar />
-      </aside>:""}
       <div className="mainLayoutWrapper">
         <header>
           {" "}
@@ -26,11 +29,9 @@ const Layout: React.FC<LayoutRouteProps> = () => {
         </header>
         <main className="main">
           <Outlet />
-        
         </main>
       </div>
     </div>
-  
   );
 };
 

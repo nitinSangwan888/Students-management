@@ -15,20 +15,24 @@
   justify-content: space-between;
   padding: 1rem 0;
   box-sizing: border-box;
+  flex-wrap: wrap;
+  
 
 }
 .cardDetails {
-  width: 23%;
-  padding: 1rem 0;
+  width: 24%;
+
+  margin-top: 10px;
+ 
+  height: 90px;
   border-radius: 4px;
   background-color: var(--light);
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
 }
 .cardDetails h1 {
-  color: var(--text);
+  color: var(--cardIcon);
 
   font-size: 3rem;
   margin: 0;
@@ -47,10 +51,13 @@
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
-  
+  flex-wrap: wrap;
 }
 .chartContainer {
-  width: 48%;
+  width: 550px;
+  width: 49%;
+
+  margin-top: 1rem;
   border-radius: 6px;
   background-color: var(--light);
   display: flex;
@@ -81,7 +88,7 @@
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #eb1616;
+  color: var(--primary);
   text-decoration: none;
 }
 
@@ -131,9 +138,17 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
-  /* background-color: var(--light); */
+ 
   box-sizing: border-box;
+  flex-wrap: wrap;
   
+}
+.CalendarContainer{
+  width: 30%;
+  height: auto;
+ 
+ 
+  padding: 1rem 0;
 }
 .footerWrapper {
   width: 100%;
@@ -169,3 +184,43 @@
     color: var(--textWhite);
 
 }
+
+
+
+
+@media screen and (max-width: 670px){
+  .HomeWrapper{
+    padding-right: 0;
+  }
+  .DetailsWrapper{
+    justify-content: center;
+    gap: 5px;
+    padding: 0 1rem;
+  }
+  .cardDetails{
+  width: 100%;
+
+  }
+  .ChartsWrapper{
+
+align-items: center;
+flex-direction: column;
+  }
+  .chartContainer{
+    width:95%;
+  }
+  .CalendarWrapper{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .CalendarContainer{
+  width: 350px;
+
+  }
+  .footerWrapper{
+    flex-direction: column;
+    align-items: center;
+  }
+ 
+} 

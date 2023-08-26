@@ -1,34 +1,35 @@
 
+// import Recharts from '../../components/Recharts/Recharts'
 
-import CalendarData from '../../components/Calender/Calendar';
-import Massege from '../../components/Calender/Massege/Massege';
-import  { chart } from '../../components/Recharts/Recharts'
-import { SaleDetails } from '../../components/SaleDetails/SaleDetails'
+import CalendarData from "../../components/Calender/Calendar";
+import Massege from "../../components/Calender/Massege/Massege";
+import { chart } from "../../components/Recharts/Recharts";
+import { SaleDetails } from "../../components/SaleDetails/SaleDetails";
 
 import TableData from '../../components/Table/TableData'
 import styles from './Home.module.css'
-
+// import Button from '@mui/material/Button';
 
 const Home = () => {
   return (
-    <div className={styles.HomeWrapper} >
-
-<div className={styles.DetailsWrapper}>
-{SaleDetails.map((item:any,index)=>{
-  return <div className={styles.cardDetails} key={index}>
-<h1>{item.component}</h1>
-<div>
-  <p>{item.title}</p>
-  <h3>{item.state}</h3>
-</div>
-  </div>
-})}
-
-</div>
+    <div className={styles.HomeWrapper}>
+      <div className={styles.DetailsWrapper}>
+        {SaleDetails.map((item: any, index) => {
+          return (
+            <div className={styles.cardDetails} key={index}>
+              <h1>{item.component}</h1>
+              <div>
+                <p>{item.title}</p>
+                <h3>{item.state}</h3>
+              </div>
+            </div>
+          );
+        })}
+      </div>
 
 <div className={styles.ChartsWrapper}>
-{chart.map((item)=>{
-  return <div className={styles.chartContainer} >
+{chart.map((item,index)=>{
+  return <div className={styles.chartContainer} key={index}>
     <div className={styles.ChartHeading}  >
 
 <p>{item.title}</p>
@@ -55,16 +56,27 @@ const Home = () => {
   </div>
 </div>
 <div className={styles.CalendarWrapper}>
+  <div className={styles.CalendarContainer}>
+
   <CalendarData/>
+
+  </div>
+  <div className={styles.CalendarContainer}>
+
   <Massege/>
-  <Massege/>
+
+
+</div> <div className={styles.CalendarContainer}>
+
+<Massege/>
+
+
+</div>
+  
 
 </div>
 
-{/* <StudentIdCard/> */}
-
-    
-    <div className={styles.footerWrapper}>
+<div className={styles.footerWrapper}>
 <div className={styles.footerDetails}><h1>Ashoka</h1> <span>, All Right CopyRight 2023</span>
  </div>
 <div className={styles.footercopyRight}>
@@ -72,7 +84,7 @@ const Home = () => {
 
     </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
