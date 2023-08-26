@@ -12,20 +12,34 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useRegisterUserMutation } from '../../../redux/StudentApi/userApi';
+
 
 
   
-  // TODO remove, this demo shouldn't need to reset the theme.
+  
   const defaultTheme = createTheme();
 
 const Register = () => {
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+
+  const [registerUserApi, { isLoading, isError, isSuccess }] = useRegisterUserMutation();
+ 
+  const changeHandaler=(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>)=>{
+    setregister({...register,[e.target.name]:e.target.value})
+  }
+  const [register, setregister] = 
+  React.useState({
+    username: "",
+    email: "",
+    phone: "",
+    password: "",
+  
+  });
+    const handleSubmit =async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
-        console.log({
-          email: data.get('email'),
-          password: data.get('password'),
-        });
+        await useRegisterUserMutation(data);
+        
       };
   return (
     <div>
@@ -50,8 +64,9 @@ const Register = () => {
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
+                 onChange={changeHandaler}
                   autoComplete="given-name"
-                  name="name"
+                  name="username"
                   required
                   fullWidth
                   id="Name"
@@ -61,6 +76,7 @@ const Register = () => {
               </Grid>
               <Grid item xs={12} sm={6}>
                 <TextField
+                 onChange={changeHandaler}
                   required
                   fullWidth
                   id="phone"
@@ -71,6 +87,7 @@ const Register = () => {
               </Grid>
               <Grid item xs={12}>
                 <TextField
+                 onChange={changeHandaler}
                   required
                   fullWidth
                   id="email"
@@ -81,6 +98,7 @@ const Register = () => {
               </Grid>
               <Grid item xs={12}>
                 <TextField
+                 onChange={changeHandaler}
                   required
                   fullWidth
                   name="password"

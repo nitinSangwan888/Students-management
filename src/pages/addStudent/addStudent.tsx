@@ -11,7 +11,7 @@ import Container from '@mui/material/Container';
 
 import './addStudent.css'
 
-
+import { BeatLoader } from "react-spinners";
 
 import { BiPencil, BiSolidUserCircle } from 'react-icons/bi';
 import { useCreateStudentMutation } from '../../../redux/StudentApi/StudentApi';
@@ -33,7 +33,7 @@ const [createStudentMutation, { isLoading, isError, isSuccess }] =
     course: "",
     address: "",
     fees: "",
-  
+    
   
   });
 
@@ -203,16 +203,32 @@ const changeHandaler=(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
                   id="Address"
                   autoComplete="current-password"
                 />
+
+<TextField
+                  fullWidth
+                  onChange={changeHandaler}
+                  name="batch"
+                  label="batch"
+                  type="batch"
+                  id="batch"
+                  autoComplete="batch"
+                />
+
               </div>
             </div>
 
             <Button
               type="submit"
+
+            
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              Submit
+              
+              {isLoading ? <BeatLoader color="#36d7b7" /> : "Submit"}
+
+        
             </Button>
           </Box>
         </Box>
