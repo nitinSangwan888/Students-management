@@ -191,8 +191,8 @@ const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
         </IconButton>
         <p>Profile</p>
       </MenuItem>
-      <MenuItem>
-      <IconButton onClick={handleMode} sx={{color:`var(--dark)`}} >
+      <MenuItem onClick={handleMode}>
+      <IconButton  sx={{color:`var(--dark)`}} >
 {mode === false ? <Brightness7Icon /> : <Brightness4Icon />}
 </IconButton>
 <p>Mode</p>

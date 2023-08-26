@@ -19,3 +19,18 @@ export interface Student {
     __v: number;
   }
   
+  export interface users {
+    _id: string;
+    name: string;
+    email: string;
+    phone: number;
+    role: string;
+    __v: number;
+  }
+  
+  export interface userResponse{
+      message:string,
+      success:boolean,
+      token?:string
+      data?:users[];
+  }
