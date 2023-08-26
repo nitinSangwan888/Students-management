@@ -10,8 +10,11 @@ import styles from './Sidebar.module.css'
 // import { useState } from 'react';
 import { useNavigate,useLocation } from 'react-router-dom';
 import { useSelector } from "react-redux";
-import { imageListClasses } from '@mui/material';
-const Sidebar = () => {
+import {AiFillCloseCircle} from 'react-icons/ai'
+// import { imageListClasses } from '@mui/material';
+const Sidebar = ({setOpen}:any) => {
+  console.log(setOpen);
+  
   const mode = useSelector((state:any)=>state.darkmode.darkMode);
 // const [isactive, setActive] = useState(0)
 const navigate = useNavigate()
@@ -79,7 +82,7 @@ const arr = [
       
       <div className={styles.logo}>
       {mode?  <img src="/ashoka-white.png" alt="" />: <img src="/Ashoka.png" alt="" />}
-         
+         <button  onClick={()=>setOpen(false)} > <AiFillCloseCircle/> </button>
             </div>
      
      <div className={styles.linksWrapper}>

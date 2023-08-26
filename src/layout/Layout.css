@@ -19,7 +19,7 @@ display: flex;
     width: 100%;
 
     display: flex;
-    --black:rgb(214, 205, 205);
+    --black:#C8FFE0;
 
         --primary: #EB1616;
         --text:#b62929;
@@ -49,3 +49,9 @@ display: flex;
 
   width: 100%;
 }
+
+/* @media screen and (max-width:1000px) {
+  .aside {
+    display: none;
+  }
+} */
