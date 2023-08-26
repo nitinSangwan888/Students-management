@@ -1,6 +1,6 @@
 import { userResponse } from './../../interface/interface';
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-const BASEURL = "http://localhost:8080/api";
+const BASEURL = "http://localhost:8080";
 import { users } from "../../interface/interface";
 
 
@@ -9,7 +9,7 @@ export const allUserApi = createApi({
     baseQuery: fetchBaseQuery({ baseUrl: BASEURL }),
     endpoints: (builder) => ({
       getAllUsers: builder.query<users, void>({
-        query: () => `/api/auth/users`,
+        query: () => `/users`,
       }),
     }),
   });
@@ -22,7 +22,7 @@ export const allUserApi = createApi({
     endpoints: (builder) => ({
       loginUser: builder.mutation<userResponse, FormData>({
         query: (formData) => ({
-          url: "/api/auth/login",
+          url: "/login",
           method: "POST",
           body: formData,
         }),
@@ -36,7 +36,7 @@ export const allUserApi = createApi({
     endpoints: (builder) => ({
       registerUser: builder.mutation<userResponse, FormData>({
         query: (formData) => ({
-          url: "/api/auth/register",
+          url: "/register",
           method: "POST",
           body: formData,
         }),

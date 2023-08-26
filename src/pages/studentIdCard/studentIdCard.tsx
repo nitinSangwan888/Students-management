@@ -5,7 +5,7 @@ import { StudentEntity } from '../../../interface/interface'
 import styles from './studentCard.module.css'
 const studentIdCard = () => {
   const { data } = useGetAllStudentQuery()
-console.log(data)
+// console.log(data)
   return (
     <div className={styles.studentCardWrapper} >
       {data?.data?.map((item:StudentEntity,index)=>{

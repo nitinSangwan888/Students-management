@@ -26,9 +26,33 @@ export const createStudentApi = createApi({
   }),
 });
 
+export const deleteStudentApi = createApi({
+  reducerPath: "deleteProductApi",
+  baseQuery: fetchBaseQuery({ baseUrl: BASEURL }),
+  endpoints: (builder) => ({
+    deleteStudent: builder.mutation<Student, string>({
+      query: (id) => ({
+        url: `/api/v1/delete/student/${id}`,
+        method: "DELETE",
+      }),
+    }),
+  }),
+});
 
+export const updateStudentApi = createApi({
+  reducerPath: "updateStudentApi",
+  baseQuery: fetchBaseQuery({ baseUrl: BASEURL }),
+  endpoints: (builder) => ({
+    updateStudent: builder.mutation<Student, string>({
+      query: (id) => ({
+        url: `/api/v1/update/student/${id}`,
+        method: "put",
+      }),
+    }),
+  }),
+});
 
-
-
+export const { useDeleteStudentMutation } = deleteStudentApi;
+export const { useUpdateStudentMutation } = updateStudentApi;
 export const { useCreateStudentMutation } = createStudentApi;
 export const { useGetAllStudentQuery  } = allStudentApi;
