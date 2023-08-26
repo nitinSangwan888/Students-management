@@ -107,13 +107,13 @@ const barchart = [
   <div className="chart-container">
     <ResponsiveContainer width="100%" height="100%">
       <BarChart data={barchartData}>
-        <CartesianGrid stroke="black" />
+       
         <XAxis dataKey="name" />
         <YAxis />
         <Tooltip />
         <Legend />
-        <Bar dataKey="pv" fill="rgba(255, 0, 0, 0.432)" />
-        <Bar dataKey="uv" fill="#dc3545" />
+        <Bar dataKey="pv" fill="var(--cardIcon)" />
+        <Bar dataKey="uv" fill="var(--primary)" />
       </BarChart>
     </ResponsiveContainer>
   </div>,
@@ -123,7 +123,7 @@ const grafCHart = [
   <div className="chart-container">
   <ResponsiveContainer width="100%" height="100%">
     <AreaChart data={grafCHartdata}>
-      <CartesianGrid stroke="black" />
+      
       <XAxis dataKey="name" />
       <YAxis />
       <Tooltip />
@@ -132,7 +132,7 @@ const grafCHart = [
         dataKey="uv"
         stackId="1"
         stroke="#8884d8"
-        fill="rgba(255, 0, 0, 0.432)"
+        fill="var(--cardIcon)"
       />
       <Area
         type="monotone"
@@ -147,7 +147,7 @@ const grafCHart = [
         dataKey="amt"
         stackId="1"
         stroke="#ffc658"
-        fill="red"
+        fill="var(--cardIcon)"
       />
     </AreaChart>
   </ResponsiveContainer>
