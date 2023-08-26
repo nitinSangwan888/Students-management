@@ -80,7 +80,9 @@ color: var(--secondary);
     transition: all ease 1s;
 
 }
-
+.sideLinksWrapper:hover span{
+    color: red;
+}
 .active{
     background-color:var(--black);
     border-top-left-radius: 30px;

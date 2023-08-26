@@ -13,10 +13,10 @@ import { useSelector } from "react-redux";
 import {AiFillCloseCircle} from 'react-icons/ai'
 // import { imageListClasses } from '@mui/material';
 const Sidebar = ({setOpen}:any) => {
-  console.log(setOpen);
+
   
   const mode = useSelector((state:any)=>state.darkmode.darkMode);
-// const [isactive, setActive] = useState(0)
+
 const navigate = useNavigate()
 const location = useLocation()
 const arr = [
