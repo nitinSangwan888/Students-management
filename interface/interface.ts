@@ -34,3 +34,20 @@ export interface Student {
       token?:string
       data?:users[];
   }
+
+  export interface loginResponse{
+    data:Logindata;
+    error:Loginerror
+  }
+
+  interface Logindata{
+    message:string;
+    success:boolean;
+    status:Number;
+    token:string
+  }
+  interface Loginerror{
+    message:string;
+    success:boolean;
+    status:Number;
+  }

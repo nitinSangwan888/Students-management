@@ -14,19 +14,56 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useNavigate } from 'react-router-dom';
-
+import { useLoginUserMutation } from '../../../redux/StudentApi/userApi';
+import { loginResponse } from '../../../interface/interface';
+import toast, { Toaster } from 'react-hot-toast';
 
   
   // TODO remove, this demo shouldn't need to reset the theme.
   const defaultTheme = createTheme();
 
 const Login = () => {
+  const [loginUserApi ] = useLoginUserMutation();
+  const [login, setlogin] = 
+  React.useState({
+    
+    email: "",
+  
+    password: "",
+  
+  });
+
+ 
   const navigate = useNavigate()
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-        const data = new FormData(event.currentTarget);
-     
-    }
+  const changeHandaler=(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>)=>{
+    setlogin({...login,[e.target.name]:e.target.value})
+  }
+  const handleSubmit =async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+try {
+    
+  const data = new FormData();
+  for (const [key, value] of Object.entries(login)) {
+data.append(key, value);
+}
+
+ const response:loginResponse =  await loginUserApi(data);
+ console.log(response)
+if(response?.data?.success){
+toast.success(response?.data?.message)
+localStorage.setItem("studentToken",response?.data?.token)
+navigate('/home')
+}else{
+toast.error(response.error.data.message)
+// console.log(response.error.data.message)
+}
+} catch (error) {
+  console.log(error)
+}
+ 
+
+       
+  };
 
   return (
     <div>
@@ -52,6 +89,7 @@ const Login = () => {
               margin="normal"
               required
               fullWidth
+              onChange={changeHandaler}
               id="email"
               label="Email Address"
               name="email"
@@ -60,6 +98,7 @@ const Login = () => {
             />
             <TextField
               margin="normal"
+              onChange={changeHandaler}
               required
               fullWidth
               name="password"
@@ -77,7 +116,7 @@ const Login = () => {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
-              onClick={()=>navigate('/home')}
+            
             >
               Sign In
             </Button>
@@ -99,6 +138,7 @@ const Login = () => {
         
       </Container>
     </ThemeProvider>
+    <Toaster    />
     </div>
   )
 }

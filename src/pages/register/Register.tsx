@@ -13,6 +13,8 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useRegisterUserMutation } from '../../../redux/StudentApi/userApi';
+import toast, { Toaster } from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -21,8 +23,9 @@ import { useRegisterUserMutation } from '../../../redux/StudentApi/userApi';
   const defaultTheme = createTheme();
 
 const Register = () => {
+  const navigate = useNavigate()
 
-  const [registerUserApi, { isLoading, isError, isSuccess }] = useRegisterUserMutation();
+  const [registerUserApi] = useRegisterUserMutation();
  
   const changeHandaler=(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>)=>{
     setregister({...register,[e.target.name]:e.target.value})
@@ -35,11 +38,31 @@ const Register = () => {
     password: "",
   
   });
+
     const handleSubmit =async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const data = new FormData(event.currentTarget);
-        await useRegisterUserMutation(data);
-        
+   try {
+       
+    const data = new FormData();
+    for (const [key, value] of Object.entries(register)) {
+  data.append(key, value);
+}
+
+  const response =   await registerUserApi(data);
+
+  if(response?.data?.success){
+    toast.success(response?.data?.message)
+    localStorage.setItem("studentToken",response?.data?.token)
+    navigate('/home')
+    }else{
+    toast.error(response.error.data.message)
+    // console.log(response.error.data.message)
+    }
+   } catch (error) {
+    console.log(error)
+   }
+
+           
       };
   return (
     <div>
@@ -125,7 +148,7 @@ const Register = () => {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="#" variant="body2">
+                <Link href="/" variant="body2">
                   Already have an account? Sign in
                 </Link>
               </Grid>
@@ -135,6 +158,8 @@ const Register = () => {
        
       </Container>
     </ThemeProvider>
+    <Toaster    />
+
     </div>
   )
 }
