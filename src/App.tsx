@@ -12,6 +12,8 @@ import Tables from './pages/Tables/Tables';
 import Form from './pages/Forms/Form';
 import Payments from './pages/Payments/Payments';
 import Analytics from './pages/Analytics/Analytics';
+
+import StudentDetails from './pages/StudentDetails/StudentDetails';
 function App() {
   return (
     <div className='appWrapper'  >
@@ -34,7 +36,7 @@ function App() {
             <Route path="/home/payments" element={<Payments  />} /> 
             <Route path="/home/analytics" element={<Analytics />} />   
             <Route path="/home/studentIdCard" element={<StudentIdCard />} />   
-
+            <Route path='/home/studentIdCard/:Id' element={<StudentDetails/>} />
 
             
             <Route path="*" element={<NoPage />} />

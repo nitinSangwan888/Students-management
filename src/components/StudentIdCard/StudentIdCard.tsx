@@ -1,10 +1,16 @@
 
 // import { StudentEntity } from '../../../interface/interface'
+import { useNavigate } from 'react-router-dom'
 import styles from './StudentIdCard.module.css'
 const StudentIdCard = (props:any) => {
    const {item}=props
+   const navigate=useNavigate()
+   const clickHandler=(id: string)=>{
+navigate(`/home/studentIdCard/${id}`)
+
+   }
   return (
-    <div className={styles.StudentIdCardWrapper}>  
+    <div className={styles.StudentIdCardWrapper} onClick={() => clickHandler(item._id)} >  
      
         <div className={styles.studendHading}>
             <img src='/ashoka-white.png' alt="" width={40} height={30} />
