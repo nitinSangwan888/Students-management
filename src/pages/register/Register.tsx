@@ -56,7 +56,7 @@ const Register = () => {
     navigate('/home')
     }else{
     toast.error(response.error.data.message)
-    // console.log(response.error.data.message)
+   
     }
    } catch (error) {
     console.log(error)
