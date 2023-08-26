@@ -30,7 +30,7 @@ display: flex;
         --light: rgb(255, 255, 255) ;
         --dark: #000000;
         --search:rgba(13, 10, 10, 0.386);
-       --hover:rgb(0, 13, 255);
+       --hover:rgb(214, 205, 205);
        --bg-add:rgb(214,205,205);
 }
 
