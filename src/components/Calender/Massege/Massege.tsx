@@ -19,7 +19,7 @@ const MessagesCard = () => {
             <Link href="#"  sx={{color:`var(--text)`,textDecoration:"none"}}>Show All</Link>
           </Box>
           <Box sx={{ borderBottom: '1px solid #ccc',display:"flex",marginBottom:"14px" }}>
-            <Avatar src="image-50.png" alt="User" sx={{ width: 40, height: 40, flexShrink: 0 }} />
+            <Avatar src="/image-50.png" alt="User" sx={{ width: 40, height: 40, flexShrink: 0 }} />
             <div style={{display:"flex",flexDirection:"column",width:"100%",alignContent:"center"}}>
               <div style={{display:"flex",width:"100%",paddingLeft:"1rem"}} >
                 <Typography variant="h6" component="h6" sx={{ margin: '0',fontSize:"1rem" ,color:`var(--dark)` }}>
@@ -33,7 +33,7 @@ const MessagesCard = () => {
             </div>
           </Box>
           <Box sx={{ borderBottom: '1px solid #ccc',display:"flex",marginBottom:"14px" }}>
-            <Avatar src="image-50.png" alt="User" sx={{ width: 40, height: 40, flexShrink: 0 }} />
+            <Avatar src="/image-50.png" alt="User" sx={{ width: 40, height: 40, flexShrink: 0 }} />
             <div style={{display:"flex",flexDirection:"column",width:"100%",alignContent:"center"}}>
               <div style={{display:"flex",width:"100%",paddingLeft:"1rem"}} >
                 <Typography variant="h6" component="h6" sx={{ margin: '0',fontSize:"1rem" ,color:`var(--dark)` }}>
@@ -45,9 +45,8 @@ const MessagesCard = () => {
               </div>
               <Typography variant="body1" sx={{paddingLeft:"1rem",color:`var(--textWhite)`}}>Short message goes here...</Typography>
             </div>
-          </Box>
-          <Box sx={{ borderBottom: '1px solid #ccc',display:"flex",marginBottom:"14px" }}>
-            <Avatar src="image-50.png" alt="User" sx={{ width: 40, height: 40, flexShrink: 0 }} />
+          </Box> <Box sx={{ borderBottom: '1px solid #ccc',display:"flex",marginBottom:"14px" }}>
+            <Avatar src="/image-50.png" alt="User" sx={{ width: 40, height: 40, flexShrink: 0 }} />
             <div style={{display:"flex",flexDirection:"column",width:"100%",alignContent:"center"}}>
               <div style={{display:"flex",width:"100%",paddingLeft:"1rem"}} >
                 <Typography variant="h6" component="h6" sx={{ margin: '0',fontSize:"1rem" ,color:`var(--dark)` }}>
@@ -59,8 +58,8 @@ const MessagesCard = () => {
               </div>
               <Typography variant="body1" sx={{paddingLeft:"1rem",color:`var(--textWhite)`}}>Short message goes here...</Typography>
             </div>
-          </Box><Box sx={{ borderBottom: '1px solid #ccc',display:"flex",marginBottom:"14px" }}>
-            <Avatar src="image-50.png" alt="User" sx={{ width: 40, height: 40, flexShrink: 0 }} />
+          </Box> <Box sx={{ borderBottom: '1px solid #ccc',display:"flex",marginBottom:"14px" }}>
+            <Avatar src="/image-50.png" alt="User" sx={{ width: 40, height: 40, flexShrink: 0 }} />
             <div style={{display:"flex",flexDirection:"column",width:"100%",alignContent:"center"}}>
               <div style={{display:"flex",width:"100%",paddingLeft:"1rem"}} >
                 <Typography variant="h6" component="h6" sx={{ margin: '0',fontSize:"1rem" ,color:`var(--dark)` }}>
